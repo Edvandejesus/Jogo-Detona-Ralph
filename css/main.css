@@ -14,7 +14,7 @@
 
 .menu {
     width: 100%;
-    height: 90px; /* ajuste conforme necessário */
+    height: 90px; 
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -27,18 +27,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1rem; /* ajuste conforme necessário */
+    margin-top: 1rem; 
 }
 
 .square {
-    width: 150px; /* ajuste conforme necessário */
-    height: 150px; /* ajuste conforme necessário */
+    width: 150px; 
+    height: 150px; 
     border: 1px solid var(--branco);
     background-color: var(--preto);
 }
 
 .enemy {
-    background-image: url(/assets/images/image01.png);
+    background-image: url(../assets/images/image01.png);
     background-size: 140px;
 }
 
