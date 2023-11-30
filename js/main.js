@@ -27,7 +27,7 @@ function countDown(){
 }
 
 function playSound() {
-    let audio = new Audio("../assets/audios/sound01.wav");
+    let audio = new Audio("./assets/audios/sound01.wav");
     audio.volume = 0.2;
     audio.play();
 }
