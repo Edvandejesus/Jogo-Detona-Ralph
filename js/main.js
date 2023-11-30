@@ -5,13 +5,32 @@ const state = {
         timeLeft: document.querySelector("#time-left"),
         score: document.querySelector("#score"),
     },
+
     values: {
         timerId: null,
+        countDownTimerId:setInterval(countDown, 1000),
         gameVelocity: 700,
         hitPosition: 0,
         result: 0,
+        currentTime:60,
     }
 };
+
+function countDown(){
+    state.values.currentTime--;
+    state.view.timeLeft.textContent = state.values.currentTime;
+
+    if(state.values.currentTime < 0){
+        clearInterval(state.countDownTimerId);
+        clearInterval(state.timerId);
+    }
+}
+
+function playSound() {
+    let audio = new Audio("../assets/audios/sound01.wav");
+    audio.volume = 0.2;
+    audio.play();
+}
 
 function randomSquare() {
     state.view.squares.forEach((square) => {
@@ -34,6 +53,7 @@ function addListenerHitBox() {
                 state.values.result++;
                 state.view.score.textContent = state.values.result;
                 state.values.hitPosition = null;
+                playSound();
             }
         });
     });

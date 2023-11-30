@@ -31,9 +31,10 @@
 }
 
 .square {
+
     width: 150px; 
     height: 150px; 
-    border: 1px solid var(--branco);
+    border: 1px solid brown;
     background-color: var(--preto);
 }
 
